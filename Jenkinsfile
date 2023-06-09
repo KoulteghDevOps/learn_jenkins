@@ -10,7 +10,7 @@ pipeline {
   }
 
   parameters {
-    string(name: "PERSON", defaultValue: 'Mr Jones', description: 'Who should I say Hello to?')
+    string(name: 'PERSON', defaultValue: 'Mr Jones', description: 'Who should I say Hello to?')
   }
 //   agent any
   environment {
