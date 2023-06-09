@@ -8,6 +8,10 @@ pipeline {
   options {
     ansiColor('xterm')
   }
+
+  parameters {
+    string(name: "PERSON", defaultValue: 'Mr Jones', description: 'Who should I say Hello to?')
+  }
 //   agent any
   environment {
     SAMPLE_URL="yahoo.com"
@@ -18,6 +22,7 @@ pipeline {
       steps {
         sh 'echo Hello-World'
         sh 'echo ${SAMPLE_URL}'
+        sh 'echo PERSON - ${PERSON}'
       }
     }
   }
