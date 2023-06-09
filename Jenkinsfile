@@ -24,7 +24,7 @@ pipeline {
       input {
                 message "Should we continue?"
                 ok "Yes, we should."
-                }
+                
             }
       steps {
         sh 'echo Hello-World'
@@ -39,5 +39,6 @@ pipeline {
       sh 'echo Post CleanUP steps'
     }
   }
+  
 }
 
