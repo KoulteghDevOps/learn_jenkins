@@ -34,12 +34,12 @@ pipeline {
     }
 
     stage('Two') {
-      steps {
-        when {
-          expression {
-            GIT_BRANCH == 'origin/main'
-          }
+      when {
+        expression {
+          GIT_BRANCH == 'origin/main'
         }
+      }
+      steps {
         sh 'env'
       }
     }
