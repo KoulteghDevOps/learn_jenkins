@@ -4,6 +4,10 @@ pipeline {
       label 'workstation'
     }
   }
+
+  options {
+    ansiColor('xterm')
+  }
 //   agent any
   environment {
     SAMPLE_URL="yahoo.com"
