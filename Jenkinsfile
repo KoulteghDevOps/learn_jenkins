@@ -32,6 +32,12 @@ pipeline {
         sh 'echo PERSON - ${PERSON}'
       }
     }
+
+    stage('Two') {
+      steps {
+        sh 'env'
+      }
+    }
   }
 
   post {
@@ -39,6 +45,6 @@ pipeline {
       sh 'echo Post CleanUP steps'
     }
   }
-  
+
 }
 
