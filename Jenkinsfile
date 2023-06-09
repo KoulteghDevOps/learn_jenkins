@@ -22,9 +22,8 @@ pipeline {
   stages {
     stage('One') {
       input {
-                message "Should we continue?"
-                ok "Yes, we should."
-                
+                message 'Should we continue?'
+                ok 'Yes'
             }
       steps {
         sh 'echo Hello-World'
@@ -36,7 +35,7 @@ pipeline {
     stage('Two') {
       when {
         expression {
-          GIT_BRANCH == 'origin/main'
+          GIT_BRANCH == 'origin/test'
         }
       }
       steps {
